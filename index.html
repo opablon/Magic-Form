@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Form</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+</head>
+<body>
+    <nav>
+        <a id="form-link" href="index.html">Form</a>
+        <a id="history-link" href="history.html">History</a>
+    </nav>
+    <form role="form">
+        <label>First Name</label>
+        <input id="fname"
+               name="first-name"
+               placeholder="First Name"
+               type="text"
+               oninput="savingData(event)"
+        >
+        <br>
+        <label>Last Name</label>
+        <input id="lname"
+               name="last-name"
+               placeholder="Last Name"
+               type="text"
+               oninput="savingData(event)"
+        >
+        <br>
+        <label>Email</label>
+        <input id="email"
+               name="email"
+               placeholder="Email"
+               type="email"
+               oninput="savingData(event)"
+        >
+        <br>
+        <label>Phone</label>
+        <input id="phone"
+               name="phone"
+               placeholder="Phone"
+               type="phone"
+               oninput="savingData(event)"
+        >
+        <br>
+        <label>Company</label>
+        <input id="company"
+               name="company"
+               placeholder="Company"
+               type="text"
+               oninput="savingData(event)"
+        >
+        <br>
+        <label>Address</label>
+        <input id="address"
+               name="address"
+               placeholder="Address"
+               type="text"
+               oninput="savingData(event)"
+        >
+        <br><br>
+        <button type="submit"
+                id="submit-button">Submit Form
+        </button>
+    </form>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

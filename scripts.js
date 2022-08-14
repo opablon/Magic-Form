@@ -99,6 +99,7 @@ window.onload = (event) => {
             }
         }
     }
+    setInterval(() => refreshPage(), 100);
 }
 
 function deleteDiv(i) {
@@ -119,4 +120,20 @@ const saveCurrentFormData = e => {
         address: address.value,
     }
     localStorage.setItem('currentFormData',JSON.stringify(currentFormData));
+}
+
+function refreshPage() {
+    const personListStorageString = localStorage.getItem('formArray');
+    const personDataCapturedStorageString = localStorage.getItem('currentFormData');
+
+    const personHistory = document.getElementById('elDivo');
+    const submitButton = document.getElementById('submit-button');
+
+    if (personListStorageString && personListStorageString != JSON.stringify(array) && personHistory) {
+        array = JSON.parse(personListStorageString);
+        document.location.reload();
+    } else if (personDataCapturedStorageString && personDataCapturedStorageString != JSON.stringify(currentFormData) && submitButton) {
+        currentFormData = JSON.parse(personDataCapturedStorageString);
+        document.location.reload();
+    }
 }
